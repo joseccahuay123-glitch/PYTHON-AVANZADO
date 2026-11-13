@@ -144,3 +144,41 @@ En el caso que queremos indicar que un determinado parametro puede ser de un `ti
 -tuple|dict -> puede ser dato de tipo tupla o diccionario  
 -list[str|int] ->  lista cuyos elementos pueden ser cadena de texto o enteros
 -dict[str|int,float|int] ->
+
+## closure
+una closure o clausura sin funciones que establecen una funcion interior, o retornan una funcion, estas funciones se caracterisan por recrear el valor de los argumentos que se le pasa.
+```python
+def multiplicacion(n):
+    def multiplicacion(m):
+        return n*m
+    return multiplicacion
+etro
+
+## programacion funcional 
+python es un leguaje de programacion multiparadigma, y uno de sus paradigmas que mejor funcion tienen es la funcional.
+python usa tres`map(),`filter(),reduce(),pero nosotros solo usamos map(),filter().
+estas funciones integradas de python sirven para procesar y transformar colecciones de datos(listas,diccionarios) de manera muy eficiente y segunda el iterable en que va acutuar. la funcion que recibe como parametro puede ser normal def o puede ser anonima lambda. 
+
+> [!tip]importante:
+> las funciones map() y filter() reciben dos parametros primero la funcion a ejecutar 
+### 1. map()
+map aplica una funcion especifica a cada uno de los elementos de una coleccion y devuelve un nuevo iterable con los resultados
+```python
+# De una lista de numeros deseamos calcular la potencia de 2 de cada numero 
+numeros:list[int]=[2,4,6,8,7]
+## cuando deseamos trabajar con una funcion anonima tenemos que declarar primero la funcion antes de pasarla por parametro
+def f(x)
+    return x**2
+##una vez creado pasamos la funcion como parametro 
+map(f,numeros)
+## cuando deseamos trabajar con funciones anonimas usamos lambda dentro del parametropor 
+map(lambda x:x**2,numeeros)
+```
+### 2. filtere()
+filter pasa cada elemento de una coleccion por una funcion y solo se queda con aquellos elementos donde la funcion
+# imagina que tienes una lista de numeros y solo quieres quedarte con los numeros pares.
+numeros:list[int]=[2,7,8,20,4,3,9,12,11,16,17]
+filter(lambda n:n % 2== 0,numeros)
+```
+>[!WARNING] nota importante
+>Tanto `map()` como `filter()` no devuelven listas directamente, sino iteradores. esto es para ahorrar memoria (evaluacion perezosa lazy evaluation). Si quieres ver el resultado como una lista traadicional, siempre deves envolver en `list()`.
