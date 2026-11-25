@@ -182,3 +182,20 @@ filter(lambda n:n % 2== 0,numeros)
 ```
 >[!WARNING] nota importante
 >Tanto `map()` como `filter()` no devuelven listas directamente, sino iteradores. esto es para ahorrar memoria (evaluacion perezosa lazy evaluation). Si quieres ver el resultado como una lista traadicional, siempre deves envolver en `list()`.
+```
+## listas por comprensión 
+Las listas por comprensión (List Comprehension) en Python son una forma sencilla, rápida y corta de crear listas a partir de otra lista o de una secuencia de datos.Permiten generar nuevos elementos, aplicar operaciones y establecer condiciones utilizando una sola línea de código, sin necesidad de escribir un ciclo for tradicional
+```python
+#Crear una lista con los cuadrados de los números del 1 al 5:
+cuadrados = [x**2 for x in range(1, 6)]
+
+print(cuadrados)
+```
+## diccionarios por comprencion
+Los diccionarios por comprensión (Dictionary Comprehension) en Python son una forma sencilla, rápida y corta de crear diccionarios en una sola línea de código.Permiten almacenar información mediante pares de clave y valor, utilizando ciclos for, condiciones if y expresiones para generar los datos automáticamente.
+```python
+#Crear un diccionario con números y sus cuadrados:
+cuadrados = {x: x**2 for x in range(1, 6)}
+
+print(cuadrados)
+```
